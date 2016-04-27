@@ -1,16 +1,40 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="windows-1252">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<head>
+    <style src="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"></style>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+    
+<script>
+    var dataSet = [
+        ["0","Andrew Shin","Computer Science","SoftEng"]
+    ];
+    
+    
+    $(document).ready(function(){
+        $("#table").DataTable({
+            data: dataSet,
+            column: [
+                { title: "id"},
+                { title: "Name"},
+                { title: "Major"},
+                { title: "Track"}
+            ]
+        });
+    });
+    
+</script>
+
+</head>
+
+
+<body>
+    <table id="table" class="display" width="100%"></table>
+    
+    
+</body>
+
 </html>
+
+
+
+
