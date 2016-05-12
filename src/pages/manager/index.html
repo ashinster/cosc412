@@ -1,0 +1,55 @@
+<html>
+<head>
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"></style>
+    
+	<script src="../../js/jquery-1.12.2.min.js"></script>
+    
+	<script src="../../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+
+<script>
+
+/*
+    var dataSet = [
+        [count,"Andrew Shin","Computer Science","SoftEng"],
+	[++count,"Andy Shin","Science Computer","softend"]
+    ];
+*/   
+ 
+    
+    $(document).ready(function(){
+        $("#table").DataTable({
+            "ajax": "data/objects.txt",
+	    "columns": [
+		{ "data": "first_name" },
+		{ "data": "last_name" },
+		{ "data": "middle_name" }
+	]
+        });
+	$("#test").html("Hello World!");
+    });
+
+</script>
+
+</head>
+
+
+<body>
+       <table id="table" class="display" cellspacing="0" width="100%">
+		<thead>
+			<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Middle Name</th>
+			</tr>
+		</thead>
+	</table>
+    
+<p id="test"></p>   
+ 
+</body>
+
+</html>
+
+
+
+
